@@ -21,11 +21,11 @@ spec:
         - name: CERBOS_CLOUD_BUNDLE
           value: "latest" # Deployment label to watch and load policies from
         - name: CERBOS_CLOUD_SECRET_KEY
-          value: "..." # Workspace secret key (generated during workspace creation) 
+          value: "CERBOS-12GGV3NTE8ZPJ-YQ528UTFEVR53QTKT9XFT6XAJDT60JCQWFRLPLV840FQJ0VULHTSV4HRH2" # Workspace secret key (generated during workspace creation) 
         - name: CERBOS_CLOUD_CLIENT_ID
-          value: "..." # Client ID of the client credential. You can create a client credential using the Settings page.
+          value: "E08B2RXK4G1G" # Client ID of the client credential. You can create a client credential using the Settings page.
         - name: CERBOS_CLOUD_CLIENT_SECRET
-          value: "..." # Client secret of the client credential. You can create a client credential using the Settings page.
+          value: "cerbos_e1o0QO/0kQ7dkZSfpchaDIBG9hkbbsf8EcRYG7NRT60" # Client secret of the client credential. You can create a client credential using the Settings page.
         ports:
         - containerPort: 3592
         - containerPort: 3593
