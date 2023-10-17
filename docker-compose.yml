@@ -1,0 +1,11 @@
+services:
+  cerbos:
+    image: ghcr.io/cerbos/cerbos:0.30.0
+    ports:
+      - 3592:3592
+      - 3593:3593
+    environment:
+      - CERBOS_CLOUD_BUNDLE="latest"
+      - CERBOS_CLOUD_SECRET_KEY=...
+      - CERBOS_CLOUD_CLIENT_ID=...
+      - CERBOS_CLOUD_CLIENT_SECRET=...
