@@ -1,5 +1,5 @@
 ---
-apiVersion: api.cerbos.cloud/v1xxx
+apiVersion: api.cerbos.cloud/v1
 labels:
   latest:         # 'latest' label pointing to the HEAD of the main branch
     branch: main
