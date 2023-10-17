@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cerbos-deployment
+  labels:
+    app: cerbos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cerbos
+  template:
+    metadata:
+      labels:
+        app: cerbos
+    spec:
+      containers:
+      - name: cerbos
+        image: ghcr.io/cerbos/cerbos:0.30.0
+        env:
+        - name: CERBOS_CLOUD_BUNDLE
+          value: "latest" # Deployment label to watch and load policies from
+        - name: CERBOS_CLOUD_SECRET_KEY
+          value: "..." # Workspace secret key (generated during workspace creation) 
+        - name: CERBOS_CLOUD_CLIENT_ID
+          value: "..." # Client ID of the client credential. You can create a client credential using the Settings page.
+        - name: CERBOS_CLOUD_CLIENT_SECRET
+          value: "..." # Client secret of the client credential. You can create a client credential using the Settings page.
+        ports:
+        - containerPort: 3592
+        - containerPort: 3593
